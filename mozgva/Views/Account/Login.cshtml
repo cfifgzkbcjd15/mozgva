@@ -1,0 +1,72 @@
+@model mozgva.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Вход";
+}
+<style>
+   
+
+    body {
+        overflow: hidden;
+    }
+    .backgr {
+        background-image: url(https://sun9-65.userapi.com/impg/E4-ZsN-Aw5zTyTsM5Can_qcPF6zqv2b9l0Kq8g/-HMvuRwV-C0.jpg?size=891x720&quality=96&sign=68364ec66aec5542859bd54b17449d7e&type=album);
+        width: 100%;
+    }
+    @@media(max-width:576px)
+    {
+        .backgr {
+            background: white;
+            width:0%;
+        }
+    }
+    .container div{
+        height:100%;
+    }
+    .no_autorize {
+        position: absolute;
+        left: 50%;
+        margin-left: -175px;
+        text-align: center;
+        border-radius: 10px;
+        height: 100%;
+        width: 350px;
+        background: white;
+        max-height: 1000px;
+    }
+</style>
+<link rel="stylesheet" href="/css/styles.css">
+@*https://sun9-68.userapi.com/impg/ksDylo74necxv42mkz2le9LpT24K-HZ-nqgj3A/Obgu5Q47_Pc.jpg?size=454x708&quality=96&sign=91dd1df54a89852f87d25a64c2310077&type=album*@
+    <center>
+        <form method="post" asp-controller="Account" asp-action="Login"
+              asp-route-returnUrl="@Model.ReturnUrl">
+            <div class="auth_panel">
+                <div class="auth_logo">
+                    <img style="width:69px;height:69px;" src="~/Photo/logotip20.png">
+                    <span>Студлайт</span>
+                </div>
+
+                <div class="auth_header">Войдите в аккаунт</div>
+
+                <div class="auth_input_container">
+                    <div class="auth_input_title">Имя пользователя</div>
+                    <input asp-for="Email" class="auth_input" placeholder="Введите имя..." />
+                    <a class="auth_input_forgot"></a>
+                </div>
+
+                <div class="auth_input_container">
+                    <div class="auth_input_title">Пароль</div>
+                    <input asp-for="Password" class="auth_input" placeholder="Введите пароль..." />
+                    <a asp-controller="Account" asp-action="ChangePassword" class="auth_input_forgot">Забыли пароль?</a>
+                    <p>Нажимая "войти" вы даёте своё согласие на обработку ваших <a asp-controller="Home" asp-action="Policy">персональных данных</a> и принимаете <a asp-controller="Home" asp-action="Agreement">пользовательское соглашение</a>.</p>
+                </div>
+
+                <div class="auth_buttons">
+                    <input type="submit" class="auth_login_btn" value="Войти" />
+                    <a class="auth_register_btn" asp-controller="Account" asp-action="Register">Зарегистрироваться</a>
+                </div>
+            </div>
+        </form>
+    </center>
+
+
+
