@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace mozgva.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()

@@ -27,69 +27,65 @@
             width: 80%;
             background: white;
         }
+        nav#header{
+            background-color: #1b6ec2;
+        }
     </style>
 </head>
 
 <body>
-    @if (User.Identity.IsAuthenticated)
-    {
+    
         <header>
-            <nav style="border-bottom: 1px solid #b8cadc00 !important; background: #EEF0F2; width: 100%; " class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom  mb-3">
-                <div class="container" style="width:100%;">
-                    <a class="navbar-brand" style="color: rgb(108 108 255);margin-right:15px" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item" style="margin-left:auto">
-                            <form method="post" asp-controller="Account" asp-action="Logout">
-                                    <div style="display: inline-block;">
-                                       
-                                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="LichnKab">
-                                            <i class="fa fa-user"></i>
-                                        </a>
-                                        
-                                    </div>
-                                <label class="upload-file__label" for="upload-file__input_output">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </label>
-                                <input hidden id="upload-file__input_output" type="submit" value="Выход" />
-                            </form>
-                        </li>
-
-                        @*else
+            <nav id="header">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a class="brand-logo" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        @if (User.Identity.IsAuthenticated)
                             {
-                            <li class="nav-item" style="margin-left:auto">
-                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Вход</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Регистрация</a>
-                            </li>
-                            }*@
-
-                    </ul>
+                            <form method="post" asp-controller="Account" asp-action="Logout">
+                                <li>
+                                    <a asp-area="" asp-controller="Home" asp-action="LichnKab">
+                                        <i class="fa fa-user"></i></a></li>
+                                <li>
+                                    <label class="upload-file__label" for="upload-file__input_output">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </label>
+                                    <input hidden id="upload-file__input_output" type="submit" value="Выход"/></li>
+                            </form>
+                            }
+                            else
+                        {
+                        <li class="nav-item" style="margin-left:auto">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Регистрация</a>
+                        </li>
+                        }
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
-        <div class="container" style=" border-radius: 10px; height: 100%; min-height: 525px; background: white; ">
-            <main role="main" class="pb-3">
+        
+            
                 @RenderBody()
-            </main>
-        </div>
-    }
-    else
-    {
-        <div class="no_autorize">
-            <main role="main">
-                @RenderBody()
-            </main>
-        </div>
-    }
+            
+        
 
 
-    @*<footer class="border-top footer text-muted">
+@*<footer class="border-top footer text-muted">
             <div class="container">
                 &copy;<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
         </footer>*@
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>

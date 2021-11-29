@@ -1,18 +1,18 @@
 const user={template:`
 <div>
     <div v-for="emp in aspnetusers">
-Имя:<br\><input v-bind:value="emp.name">
+Имя:<br\><input v-bind:value="emp.name" disabled>
 <br\>
 <br\>
-E-mail<br\><input v-bind:value="emp.email">
+E-mail<br\><input v-bind:value="emp.email" disabled>
+<br\>
+<br\> 
+Номер телефона:<br\><input v-bind:value="emp.phoneNumber" disabled>
 <br\>
 <br\>
-Номер телефона:<br\><input v-bind:value="emp.phoneNumber">
-<br\>
-<br\>
-
+<a v-bind:href="'http://localhost:5000/Home/Index/'+emp.id" >Подробнее об игре</a>
 <button type="button"
-            class="btn btn-light mr-1"
+            class="waves-effect waves-light btn"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             @click="editClick(emp)">

@@ -19,19 +19,14 @@
             width:0%;
         }
     }
-    .container div{
+    div.container{
         height:100%;
     }
-    .no_autorize {
-        position: absolute;
-        left: 50%;
-        margin-left: -175px;
-        text-align: center;
-        border-radius: 10px;
-        height: 100%;
-        width: 350px;
-        background: white;
-        max-height: 1000px;
+    form{
+        margin-top: 2.8em;
+    }
+    div.auth_panel{
+        padding-top: 2em;
     }
 </style>
 <link rel="stylesheet" href="/css/styles.css">
@@ -41,8 +36,10 @@
               asp-route-returnUrl="@Model.ReturnUrl">
             <div class="auth_panel">
                 <div class="auth_logo">
-                    <img style="width:69px;height:69px;" src="~/Photo/logotip20.png">
-                    <span>Студлайт</span>
+                    <div style="background-color: #1b6ec2">
+                        <img style="width:69px;height:69px;" src="~/Photo/logotip20.png">
+                        </div>
+                    <span>Мозгва</span>
                 </div>
 
                 <div class="auth_header">Войдите в аккаунт</div>

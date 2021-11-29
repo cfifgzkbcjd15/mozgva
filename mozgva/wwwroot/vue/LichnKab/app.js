@@ -1,6 +1,6 @@
 const routes=[
     { path:'/my-games',component:games},
-    { path: '/user', component: user },
+    { path: '*', component: user },
     { path: '/gift-card', component: giftCard }
 ]
 

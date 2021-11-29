@@ -3,30 +3,48 @@
     ViewBag.Title = "Личный Кабинет";
 }
 <br />
-<div id="app" class="container">
-    <h5  class="d-flex justify-content-left">
+<style>
+
+    
+    main.pb-3{
+     margin-top: 2.8rem; 
+    }
+    ul#ul-user-hab.tabs.tabs-transparent{
+        width: 69%;
+    }
+    nav#user-hab.nav-extended{
+        background-color: #1b6ec2;
+        width: auto;
+    }
+    button.waves-effect.waves-light.btn{
+            background-color: #1b6ec2;
+        }
+    
+</style>
+<body>
+<div id="app" class="container" style=" border-radius: 10px; height: 100%; min-height: 525px; background: white; ">
+    <h5  class="d-flex justify-content-left" style="margin: 2.8rem 0 1.68rem 0">
         Личный кабинет
     </h5>
-    <br />
-    <nav class="navbar navbar-expand-sm  navbar-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item m-1">
-                <router-link class="btn btn-light btn-outline-primary"
-                             to="/user">Персональные данные</router-link>
-            </li>
-            <li class="nav-item m-1">
-                <router-link class="btn btn-light btn-outline-primary"
-                             to="/my-games">Мои игры</router-link>
-            </li>
-            <li class="nav-item m-1">
-                <router-link class="btn btn-light btn-outline-primary"
-                             to="/gift-card">Подарочные сертификаты</router-link>
-            </li>
-
-        </ul>
+    <br/>
+    <nav id="user-hab" class="nav-extended">
+        <div class="nav-content">
+            <ul id="ul-user-hab" class="tabs tabs-transparent">
+                <li class="tab"><router-link to="/user">Персональные данные</router-link></li>
+                <li class="tab"><router-link to="/my-games">Мои игры</router-link></li>
+                <li class="tab"><router-link to="/gift-card">Подарочные сертификаты</router-link></li>
+            </ul>
+        </div>
     </nav>
+    <br/>
     <router-view></router-view>
 </div>
+</body>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
