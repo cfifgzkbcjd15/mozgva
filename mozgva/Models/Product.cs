@@ -12,6 +12,7 @@ namespace mozgva.Models
         public string Name { get; set; }
         public string Category { get; set; }
         public string FileFileName { get; set; }
+        public string Pric { get { if (Price > 0) { return Price.ToString(); } else { return "Бесплатно"; }; } }
         public string FileContentType { get; set; }
         public int? FileFileSize { get; set; }
         public DateTime? FileUpdatedAt { get; set; }

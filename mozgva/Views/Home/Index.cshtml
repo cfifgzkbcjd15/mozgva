@@ -7,36 +7,43 @@
         color: rgb(59 31 145);
         margin-right: 15px
     }
-    div#heder_info.row{
+
+    div#heder_info.row {
         color: white;
         height: 50%;
     }
-    div#heder_info-video.col-6{
+
+    div#heder_info-video.col-6 {
         width: 58%;
         padding: inherit;
     }
-    div#info.col-6{
+
+    div#info.col-6 {
         background: #1B43CB;
         width: 42%;
         height: auto;
         padding: 24px 30px 24px 30px;
     }
-    a.franchise_link{
+
+    a.franchise_link {
         font-family: "Montserrat-Bold",sans-serif;
         font-size: 16px;
         line-height: 150%;
         color: #F2F3F8;
         margin-left: 40px;
     }
-    div.social_wrap{
+
+    div.social_wrap {
         text-align: right;
         padding-left: 1em;
     }
-    div.step.step_1{
+
+    div.step.step_1 {
         margin-top: 55px;
         transition: opacity .5s ease;
     }
-    div.title{
+
+    div.title {
         font-family: "IgraSans",sans-serif;
         font-size: 45px;
         line-height: 110%;
@@ -44,30 +51,36 @@
         margin-bottom: 40px;
         margin-left: -2px;
     }
-    div.header_img{
+
+    div.header_img {
         position: relative;
         display: flex;
         width: 58%;
     }
-    video#mozgva_home_video{
+
+    video#mozgva_home_video {
         width: 100%;
         object-fit: contain;
     }
-    div#btn_player{
+
+    div#btn_player {
         cursor: pointer;
         position: absolute;
         top: calc(50% - 133px);
         left: calc(50% - 133px);
     }
-    img.play{
+
+    img.play {
         width: 266px;
         height: 266px;
     }
-    footer.page-footer{
+
+    footer.page-footer {
         padding: 27px 15px 14px 30px;
         background-color: #A4D5F1;
     }
-    p.left_desc{
+
+    p.left_desc {
         width: 280px;
         font-family: "Montserrat",sans-serif;
         margin-left: 0;
@@ -78,17 +91,20 @@
         text-align: left;
         margin-bottom: 0;
     }
-    h2.title{
+
+    h2.title {
         font-family: "Montserrat-Bold",sans-serif;
         font-size: 16px;
         line-height: 150%;
         color: #1B43CB;
     }
-    p{
+
+    p {
         margin-top: 45px;
         margin-left: 20px;
     }
-    div.circle.c1{
+
+    div.circle.c1 {
         background: #BD5EDE;
         position: relative;
         margin-left: -20px;
@@ -97,7 +113,8 @@
         border-radius: 50%;
         border: 2px solid #A4D5F1;
     }
-    div.circle.c2{
+
+    div.circle.c2 {
         background: #BD5EDE;
         position: relative;
         margin-left: -20px;
@@ -106,94 +123,139 @@
         border-radius: 50%;
         border: 2px solid #A4D5F1;
     }
-    div.circle.c3{
+
+    div.circle.c3 {
         background: #BD5EDE;
         position: relative;
         margin-left: -20px;
         width: 160px;
         height: 160px;
         border-radius: 50%;
-        border: 2px solid #A4D5F1;    
+        border: 2px solid #A4D5F1;
     }
-    div.col.s4{
+
+    div.col.s4 {
         padding-left: 0;
     }
-    
-    footer#footer-info.page-footer{
+
+    footer#footer-info.page-footer {
         background: #242424;
     }
-</style>
+    .counter {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
 
-<div class="row" id="heder_info">
-    <div class="col-6" id="info">
-        <div class="row">
-            <div class="col-6">
-                <a class="logo" href="#">
-                    <img src="Photo/logotip20.png" alt="Logo">
-                </a>
-                <a class="franchise_link" target="_blank" href="https://franchise.mozgva.com/">Франшиза</a>
-            </div>
-            <div class="col-6 ">
-                <div class="social_wrap">
-                    <a class="fb" target="_blank" href="https://www.facebook.com/etomozgvadetka/"><img src="Photo/facebook.png" alt="Fb"></a>
-                    <a class="vk" target="_blank" href="https://vk.com/etomozgvadetka"><img src="Photo/vk.png" alt="Vk"></a>
-                    <a class="vk" target="_blank" href="https://www.instagram.com/mozgva_msk/"><img src="Photo/inst.png" alt="Instagram"></a>
-                    <a class="vk" target="_blank" href="https://telega.at/mozgvaonline"><img src="Photo/teleg.png" alt="Telegram"></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="main_content">
-            <div class="step step_1">
-                <div class="title" style="display: block;">
-                    <p class="flow-text">Интеллектуальна<br/> 
-                        развлекательная<br/>
-                        онлайн-игра</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-6" id="heder_info-video">
-        
-        <video id="mozgva_home_video" poster="Photo/fon-video.png">
-            <source src="Photo/mozgva_home2.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-            Тег video не поддерживается вашим браузером.
-        </video>
-        <div id="btn_player">
-            <img class="play" src="Photo/video-play.png" alt="Video btn">
-        </div>
-    </div>
-</div>
-<footer class="page-footer">
-    <div id="o-igre">
-        <div class="row" >
-            <div class="col s12">
-                <h5 class="white-text">Что будет на игре</h5>
-            </div>
+        .counter img {
+            display: block;
+            margin: 5px;
+            width: 344px;
+            height:242px;
+            white-space: nowrap;
+        }
+
+            .counter img:nth-child(n) {
+                order: 1;
+            }
+
+        .counter p:nth-child(n) {
+            order: 2;
+        }
+
+        .counter p:nth-child(3n) {
+            order: 3;
+        }
+
+        .counter p {
+            display: block;
+            margin: 5px;
+            width: 300px;
+            word-break:break-all;
+        }
+</style>
+    <div class="row" id="heder_info">
+        <div class="col-6" id="info">
             <div class="row">
-                <div class="col s4">
-                    <p class="left_desc">
-                        Соберите команду, устройтесь<br>на диване или организуйте<br> видеконференцию и проведите<br> вечер с удовольствием!
-                    </p>
+                <div class="col-6">
+                    <a class="logo" href="#">
+                        <img src="Photo/logotip20.png" alt="Logo">
+                    </a>
+                    <a class="franchise_link" target="_blank" href="https://franchise.mozgva.com/">Франшиза</a>
                 </div>
-                <div class="col s3">
-                    <h2 class="title">С вас:</h2>
-                    <div class="row">
-                        <div class="circle c1">
-                            <p>Хороший<br>интернет</p>
-                        </div>
-                        <div class="circle c2">
-                            <p>Команда<br>от 2-х чел</p>
-                        </div>
-                        <div class="circle c3">
-                            <p>Желание<br>пошевелить<br>мозгами</p>
-                        </div>
+                <div class="col-6 ">
+                    <div class="social_wrap">
+                        <a class="fb" target="_blank" href="https://www.facebook.com/etomozgvadetka/"><img src="Photo/facebook.png" alt="Fb"></a>
+                        <a class="vk" target="_blank" href="https://vk.com/etomozgvadetka"><img src="Photo/vk.png" alt="Vk"></a>
+                        <a class="vk" target="_blank" href="https://www.instagram.com/mozgva_msk/"><img src="Photo/inst.png" alt="Instagram"></a>
+                        <a class="vk" target="_blank" href="https://telega.at/mozgvaonline"><img src="Photo/teleg.png" alt="Telegram"></a>
                     </div>
                 </div>
-                <div class="col s4">
-                    <h2 class="title">С нас:</h2>
-                    <div class="row">
-                        <div class="circle c1">
+            </div>
+
+            <div class="main_content">
+                <div class="step step_1">
+                    <div class="title" style="display: block;">
+                        <p class="flow-text">
+                            Интеллектуальна<br />
+                            развлекательная<br />
+                            онлайн-игра
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6" id="heder_info-video">
+
+            <video id="mozgva_home_video" poster="Photo/fon-video.png">
+                <source src="Photo/mozgva_home2.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+                Тег video не поддерживается вашим браузером.
+            </video>
+            <div id="btn_player">
+                <img class="play" src="Photo/video-play.png" alt="Video btn">
+            </div>
+        </div>
+    </div>
+    <div id="app" style="background:white">
+        <router-link to="/product">Игры</router-link>
+        <center>
+            <div>
+                <router-view></router-view>
+            </div>
+        </center>
+    </div>
+    <footer class="page-footer">
+        <div id="o-igre">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">Что будет на игре</h5>
+                </div>
+                <div class="row">
+                    <div class="col s4">
+                        <p class="left_desc">
+                            Соберите команду, устройтесь<br>на диване или организуйте<br> видеконференцию и проведите<br> вечер с удовольствием!
+                        </p>
+                    </div>
+                    <div class="col s3">
+                        <h2 class="title">С вас:</h2>
+                        <div class="row">
+                            <div class="circle c1">
+                                <p>Хороший<br>интернет</p>
+                            </div>
+                            <div class="circle c2">
+                                <p>Команда<br>от 2-х чел</p>
+                            </div>
+                            <div class="circle c3">
+                                <p>Желание<br>пошевелить<br>мозгами</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <h2 class="title">С нас:</h2>
+                        <div class="row">
+                            <div class="circle c1">
                                 <p>Ведущий и<br>вопросы в<br>прямом эфире</p>
                             </div>
                             <div class="circle c2">
@@ -210,60 +272,69 @@
                 </div>
             </div>
         </div>
-</footer>
+    </footer>
 
-<footer class="page-footer" id="footer-info">
-    <div class="container">
-        <div class="row">
-            <div class="col l4 s12">
-               <ul>
-                   <li>
-                       <a class="grey-text text-lighten-3" href="#!">Календарь игр</a>
-                   </li>
-                   <li>
-                       <a class="grey-text text-lighten-3" href="#!">Франшиза</a>
-                   </li>
-                   <li>
-                       <a class="grey-text text-lighten-3" href="#!">Подарочные сертификаты</a>
-                   </li>
-                   <li>
-                       <a class="grey-text text-lighten-3" href="#!">Корпоратив"</a>
-                   </li>
-                   <li>
-                       <a class="grey-text text-lighten-3" href="#!">Рейтинг команд</a>
-                   </li>
-               </ul>
-            </div>
-            <div class="col l4 s12">
-                <ul>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Правила оплаты, безопасность
-                                                                      и конфиденциальность </a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Пользовательское соглашение</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Как играть?</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Домашняя "Мозгва"</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Медиа-кит 2020</a>
-                    </li>
-                    <li>
-                        <a class="grey-text text-lighten-3" href="#!">Что такое «Мозгва»?</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
+    <footer class="page-footer" id="footer-info">
         <div class="container">
-            © Квиз «Мозгва»
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <div class="row">
+                <div class="col l4 s12">
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Календарь игр</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Франшиза</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Подарочные сертификаты</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Корпоратив"</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Рейтинг команд</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l4 s12">
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                Правила оплаты, безопасность
+                                и конфиденциальность
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Пользовательское соглашение</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Как играть?</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Домашняя "Мозгва"</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Медиа-кит 2020</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Что такое «Мозгва»?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
-            
+        <div class="footer-copyright">
+            <div class="container">
+                © Квиз «Мозгва»
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="~/vue/Main/product.js"></script>
+<script src="~/vue/Main/variables.js"></script>
+<script src="~/vue/Main/app.js"></script>

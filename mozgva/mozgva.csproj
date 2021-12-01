@@ -5,6 +5,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\CineMozgva.png" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\Free.png" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_90s_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_90s_new_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_beznravstvennaya_1080x760.png" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_cool_2000s_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_easy2.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_easy_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_friends_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_Game_Of_Thrones_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_harry_potter_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_literature_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_maks_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_new_year_1080x760.png" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_oscars_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_TravelМозгва_1080x760.png" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_пьянящая_1080x760.jpg" />
+    <None Include="wwwroot\Mozgva_Game_Card_Imgs\mozgva_пьянящая_1080x760_%281%29.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MailKit" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
