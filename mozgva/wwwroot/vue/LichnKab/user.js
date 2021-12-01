@@ -1,6 +1,10 @@
-const user={template:`
+const user = {
+    template:`
 <div>
+<center>
     <div v-for="emp in aspnetusers">
+<div class="inp_long">
+
 Имя:<br\><input v-bind:value="emp.name" disabled>
 <br\>
 <br\>
@@ -10,7 +14,9 @@ E-mail<br\><input v-bind:value="emp.email" disabled>
 Номер телефона:<br\><input v-bind:value="emp.phoneNumber" disabled>
 <br\>
 <br\>
-<a v-bind:href="'http://localhost:5000/Home/Index/'+emp.id" >Подробнее об игре</a>
+</div>
+<a v-bind:href="'http://localhost:17251/Home/Index/'+emp.id" >Подробнее об игре</a>
+<a v-bind:href="'http://localhost:17251/Account/ChangePassword/'" >Сменить пароль</a>
 <button type="button"
             class="waves-effect waves-light btn"
             data-bs-toggle="modal"
@@ -59,7 +65,7 @@ E-mail<br\><input v-bind:value="emp.email" disabled>
     </div>
         <button type="button" @click="updateClick()"
         v-if="Email!=null" class="btn btn-primary">
-        Update
+        Изменить
         </button>
 
     </div>
@@ -68,7 +74,7 @@ E-mail<br\><input v-bind:value="emp.email" disabled>
 </div>
 </div>
 
-
+</center>
 </div>
 
 
@@ -94,7 +100,7 @@ methods:{
         });
     },
     editClick(emp){
-        this.modalTitle = "Edit Users";
+        this.modalTitle = "Изменить данные";
         this.Name = emp.name;
         this.PhoneNumber = emp.phoneNumber;
         this.Email = emp.email;

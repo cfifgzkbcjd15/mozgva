@@ -7,7 +7,7 @@ namespace mozgva
 {
     public class RoleInitializer
     {
-        public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task InitializeAsync(UserManager<AspNetUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             string adminEmail = "admin@mail.com";
             string password = "Admin1&";
@@ -22,7 +22,7 @@ namespace mozgva
             }
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
-                User admin = new User { Email = adminEmail, UserName = adminEmail,EmailConfirmed=true };
+                AspNetUser admin = new AspNetUser { Email = adminEmail, UserName = adminEmail,EmailConfirmed=true };
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {

@@ -13,10 +13,10 @@ namespace mozgva.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<User> _userManager;
-        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<AspNetUser> _userManager;
+        private readonly SignInManager<AspNetUser> _signInManager;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<AspNetUser> userManager, SignInManager<AspNetUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -32,7 +32,7 @@ namespace mozgva.Controllers
             // установка массива байтов model.Password, 
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email,Name=model.Name,PhoneNumber=model.Phone };
+                AspNetUser user = new AspNetUser { Email = model.Email, UserName = model.Email,Name=model.Name,PhoneNumber=model.Phone };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -150,7 +150,7 @@ namespace mozgva.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = await _userManager.FindByEmailAsync(model.Email);//.FindByIdAsync(model.Id);
+                AspNetUser user = await _userManager.FindByEmailAsync(model.Email);//.FindByIdAsync(model.Id);
                 if (user != null)
                 {
                     IdentityResult result =

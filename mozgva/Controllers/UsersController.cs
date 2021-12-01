@@ -13,9 +13,9 @@ namespace mozgva.Controllers
     [Authorize(Roles ="admin")]
     public class UsersController : Controller
     {
-        UserManager<User> _userManager;
+        UserManager<AspNetUser> _userManager;
 
-        public UsersController(UserManager<User> userManager)
+        public UsersController(UserManager<AspNetUser> userManager)
         {
             _userManager = userManager;
         }
@@ -27,7 +27,7 @@ namespace mozgva.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email};
+                AspNetUser user = new AspNetUser { Email = model.Email, UserName = model.Email};
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -46,7 +46,7 @@ namespace mozgva.Controllers
 
         public async Task<IActionResult> Edit(string id)
         {
-            User user = await _userManager.FindByIdAsync(id);
+            AspNetUser user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -61,7 +61,7 @@ namespace mozgva.Controllers
             
             if (ModelState.IsValid)
             {
-                User user = await _userManager.FindByIdAsync(model.Id);
+                AspNetUser user = await _userManager.FindByIdAsync(model.Id);
                 if (user != null)
                 {
                     user.Email = model.Email;
@@ -87,7 +87,7 @@ namespace mozgva.Controllers
         [HttpPost]
         public async Task<ActionResult> Delete(string id)
         {
-            User user = await _userManager.FindByIdAsync(id);
+            AspNetUser user = await _userManager.FindByIdAsync(id);
             if (user != null)
             {
                 IdentityResult result = await _userManager.DeleteAsync(user);
@@ -96,7 +96,7 @@ namespace mozgva.Controllers
         }
         public async Task<IActionResult> ChangePassword(string id)
         {
-            User user = await _userManager.FindByIdAsync(id);
+            AspNetUser user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
@@ -109,7 +109,7 @@ namespace mozgva.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = await _userManager.FindByIdAsync(model.Id);
+                AspNetUser user = await _userManager.FindByIdAsync(model.Id);
                 if (user != null)
                 {
                     IdentityResult result =

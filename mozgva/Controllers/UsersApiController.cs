@@ -24,13 +24,13 @@ namespace mozgva.Controllers
             db = context;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+        public async Task<ActionResult<IEnumerable<AspNetUser>>> Get()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             return await db.Users.Where(x=>x.Id==userId).ToListAsync();
         }
         [HttpPost]
-        public async Task<ActionResult<User>> Post(User user)
+        public async Task<ActionResult<AspNetUser>> Post(AspNetUser user)
         {
             if (user == null)
             {
@@ -44,10 +44,10 @@ namespace mozgva.Controllers
 
         // PUT api/users/
         [HttpPut]
-        public async Task<ActionResult<User>> Put(User user)
+        public async Task<ActionResult<User>> Put(AspNetUser user)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            User userupdate = db.Users.FirstOrDefault(x => x.Id == userId);
+            AspNetUser userupdate = db.Users.FirstOrDefault(x => x.Id == userId);
             userupdate.Name = user.Name;
             userupdate.Email = user.Email;
             userupdate.PhoneNumber = user.PhoneNumber;

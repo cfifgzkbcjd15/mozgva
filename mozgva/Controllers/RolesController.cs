@@ -13,8 +13,8 @@ namespace mozgva.Controllers
     public class RolesController : Controller
     {
         RoleManager<IdentityRole> _roleManager;
-        UserManager<User> _userManager;
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        UserManager<AspNetUser> _userManager;
+        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<AspNetUser> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
@@ -59,7 +59,7 @@ namespace mozgva.Controllers
         public async Task<IActionResult> Edit(string userId)
         {
             // получаем пользователя
-            User user = await _userManager.FindByIdAsync(userId);
+            AspNetUser user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 // получем список ролей пользователя
@@ -81,7 +81,7 @@ namespace mozgva.Controllers
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
             // получаем пользователя
-            User user = await _userManager.FindByIdAsync(userId);
+            AspNetUser user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
                 // получем список ролей пользователя

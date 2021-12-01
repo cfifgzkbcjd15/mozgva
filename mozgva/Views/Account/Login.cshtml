@@ -3,11 +3,6 @@
     ViewBag.Title = "Вход";
 }
 <style>
-   
-
-    body {
-        overflow: hidden;
-    }
     .backgr {
         background-image: url(https://sun9-65.userapi.com/impg/E4-ZsN-Aw5zTyTsM5Can_qcPF6zqv2b9l0Kq8g/-HMvuRwV-C0.jpg?size=891x720&quality=96&sign=68364ec66aec5542859bd54b17449d7e&type=album);
         width: 100%;
@@ -28,11 +23,11 @@
     div.auth_panel{
         padding-top: 2em;
     }
+    
 </style>
 <link rel="stylesheet" href="/css/styles.css">
-@*https://sun9-68.userapi.com/impg/ksDylo74necxv42mkz2le9LpT24K-HZ-nqgj3A/Obgu5Q47_Pc.jpg?size=454x708&quality=96&sign=91dd1df54a89852f87d25a64c2310077&type=album*@
     <center>
-        <form method="post" asp-controller="Account" asp-action="Login"
+        <form method="post" asp-controller="Account" asp-action="Login" style="background:white;width:350px;border-radius:15px"
               asp-route-returnUrl="@Model.ReturnUrl">
             <div class="auth_panel">
                 <div class="auth_logo">

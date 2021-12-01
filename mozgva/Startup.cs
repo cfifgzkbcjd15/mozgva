@@ -93,7 +93,7 @@ namespace mozgva
                 };
             });
             services.AddTransient<IUserService, UserService>();
-            services.AddIdentity<User, IdentityRole>(opts =>
+            services.AddIdentity<AspNetUser, IdentityRole>(opts =>
             {
                 opts.User.RequireUniqueEmail = true;    // уникальный email
                 opts.User.AllowedUserNameCharacters = ".@abcdefghijklmnopqrstuvwxyz0123456789";
