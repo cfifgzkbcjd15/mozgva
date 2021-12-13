@@ -11,7 +11,7 @@ namespace mozgva.Services
     {
         public bool IsValidUserInformation(LoginModel model)
         {
-            if (model.UserName.Equals("Pyaliska") && model.Password.Equals("ihesop69")) return true;
+            if (model.UserName.Equals("Pyaliska") && model.Password.Equals("")) return true;
             else return false;
         }
     }
