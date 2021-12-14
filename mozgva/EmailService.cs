@@ -24,7 +24,7 @@ namespace mozgva
             using (var client = new SmtpClient())
             {
                 await client.ConnectAsync("smtp.mail.ru", 465, true);
-                await client.AuthenticateAsync("cfifgzkbcjd@mail.ru", "ihesop69&");
+                await client.AuthenticateAsync("cfifgzkbcjd@mail.ru", "");
                 await client.SendAsync(emailMessage);
 
                 await client.DisconnectAsync(true);
